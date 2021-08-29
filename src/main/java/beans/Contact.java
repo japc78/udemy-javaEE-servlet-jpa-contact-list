@@ -4,19 +4,19 @@ public class Contact {
 	private int id;
 	private String name;
 	private String email;
-	private int numberPhone;
+	private int phoneNumber;
 	
 	
 	public Contact() {
 	}
 
 
-	public Contact(int id, String name, String email, int numberPhone) {
+	public Contact(int id, String name, String email, int phoneNumber) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		this.numberPhone = numberPhone;
+		this.phoneNumber = phoneNumber;
 	}
 
 
@@ -50,12 +50,12 @@ public class Contact {
 	}
 
 
-	public int getNumberPhone() {
-		return numberPhone;
+	public int getPhoneNumber() {
+		return phoneNumber;
 	}
 
 
-	public void setNumberPhone(int numberPhone) {
-		this.numberPhone = numberPhone;
+	public void setPhoneNumber(int numberPhone) {
+		this.phoneNumber = numberPhone;
 	}	
 }
