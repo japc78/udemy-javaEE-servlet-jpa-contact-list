@@ -30,7 +30,7 @@
 				<td><%=c.getName()%></td>
 				<td><%=c.getEmail()%></td>
 				<td><%=c.getPhoneNumber()%></td>
-				<td><a href="Controller?option=doDelete&?id=<%=c.getId()%>">Delete</a></td>
+				<td><a href="Controller?option=doDelete&id=<%=c.getId()%>">Delete</a></td>
 			</tr>
 			<%
 			}
