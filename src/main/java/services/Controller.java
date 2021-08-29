@@ -24,23 +24,23 @@ public class Controller extends HttpServlet {
 		
 		switch (option) {
 		case "doDelete": 
-			request.getRequestDispatcher("DeleteAction").include(request, response);
+			request.getRequestDispatcher("DeleteContact").include(request, response);
 			url = "contacts.jsp";
 			break;
 		
 		case "doList":
-			request.getRequestDispatcher("ListAction").include(request, response);
+			request.getRequestDispatcher("ListContact").include(request, response);
 			url = "contacts.jsp";
 			break;
 		
 		case "doAdd":
 			request.getRequestDispatcher("add-contact.jsp").include(request, response);
-			request.getRequestDispatcher("AddAction").include(request, response);
+			request.getRequestDispatcher("AddContact").include(request, response);
 			url = "index.html";
 			break;
 			
 		case "toSignUp":
-			url = "form-add-contact.html";
+			url = "form-add-contact.html"; 
 			break;
 		
 		case "toHome" :
