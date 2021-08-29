@@ -30,8 +30,8 @@
 			<tr>
 				<td><%=c.getName()%></td>
 				<td><%=c.getEmail()%></td>
-				<td><%=c.getNumberPhone()%></td>
-				<td><a href="DelelteContact?id=<%=c.getId()%>">Delete</a></td>
+				<td><%=c.getPhoneNumber()%></td>
+				<td><a href="DeleteContact?id=<%=c.getId()%>">Delete</a></td>
 			</tr>
 			<%
 			}
