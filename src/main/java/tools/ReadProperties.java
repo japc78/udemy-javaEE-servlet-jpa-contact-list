@@ -18,7 +18,11 @@ public class ReadProperties {
 	private void readData() {
 		Properties properties= new Properties();
 	    try {
-	    	properties.load(new FileInputStream(new File("config.properties")));
+	    	String path = "D:/dev/training/ws-eclipse-udemy-javaee-spring-jpa-hibernate/15_contact_list/";
+	    	String fileName = "config.properties";
+	    	
+	    	File configFile = new File( path + fileName);
+	    	properties.load(new FileInputStream(configFile));
       
 			this.driver = properties.getProperty("DB_DRIVER");
 			this.url = properties.getProperty("DB_URL");
