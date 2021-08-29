@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	import="java.util.List, model.ContactList, beans.Contact"
+	import="java.util.List, beans.Contact"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
@@ -21,8 +21,7 @@
 				<th></th>
 			</tr>
 			<%
-			ContactList cl = new ContactList();
-			List<Contact> contacts = cl.getAllContacts();
+			List<Contact> contacts =(List<Contact>) request.getAttribute("contacts");
 			%>
 			<%
 			for (Contact c : contacts) {
@@ -31,14 +30,14 @@
 				<td><%=c.getName()%></td>
 				<td><%=c.getEmail()%></td>
 				<td><%=c.getPhoneNumber()%></td>
-				<td><a href="DeleteContact?id=<%=c.getId()%>">Delete</a></td>
+				<td><a href="Controller?option=doDelete&?id=<%=c.getId()%>">Delete</a></td>
 			</tr>
 			<%
 			}
 			%>
 
 		</table>
-		<br /> <br /> <a href="index.html">Back</a>
+		<br /> <br /> <a href="Controller?option=toHome">Back</a>
 	</main>
 
 </body>

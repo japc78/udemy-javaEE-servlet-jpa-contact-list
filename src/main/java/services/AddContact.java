@@ -22,7 +22,5 @@ public class AddContact extends HttpServlet {
 		Contact contact = (Contact) request.getAttribute("contact");
 		
 		cl.addContact(contact);
-		
-		request.getRequestDispatcher("index.html").forward(request, response);
 	}
 }

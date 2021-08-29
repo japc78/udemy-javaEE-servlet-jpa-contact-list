@@ -9,6 +9,5 @@
 <body>
 	<jsp:useBean id="contact" class="beans.Contact" scope="request"/>
 	<jsp:setProperty property="*" name="contact"/>
-	<jsp:forward page="AddContact"/>
 </body>
 </html>
