@@ -3,7 +3,11 @@ package model;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import beans.Contact;
 import tools.ReadProperties;
@@ -58,4 +62,23 @@ public class ContactList {
             ex.printStackTrace();
         }     
     }
+	
+	
+	public List<Contact> getAllContacts(){        
+        List<Contact> list = new ArrayList<>(); 
+        
+        try (Connection cn = DriverManager.getConnection(url, user, pass);) {                                   
+            String sql="select * from contactos";
+            
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sql);            
+            
+            while(rs.next()){
+                list.add(new Contact(rs.getInt("id"),rs.getString("name"),rs.getString("email"),rs.getInt("phonNumber")));
+            }
+        }  catch (SQLException ex) {
+            ex.printStackTrace();
+        }   
+        return list;
+    }	
 }
