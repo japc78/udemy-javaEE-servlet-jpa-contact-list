@@ -12,7 +12,7 @@ import model.ContactList;
 /**
  * Servlet implementation class ContactList
  */
-@WebServlet("/ContactList")
+@WebServlet("/ListContact")
 public class ListContact extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
