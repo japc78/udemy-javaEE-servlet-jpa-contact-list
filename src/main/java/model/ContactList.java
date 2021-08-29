@@ -45,4 +45,17 @@ public class ContactList {
 			ex.printStackTrace();
 		}
 	}
+	
+	
+	public void deleteContact(int id) {
+		try (Connection cn = DriverManager.getConnection(url, user, pass);) {
+            String sql="Delete from contact where id = ?";
+            
+            PreparedStatement ps=cn.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.execute();
+        }  catch (SQLException ex) {
+            ex.printStackTrace();
+        }     
+    }
 }
